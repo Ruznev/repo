@@ -1,0 +1,9 @@
+workspace:
+  id: c02fdb16-8e87-4a9b-86be-62c32ce597e8
+cloudResources:
+  globals:
+    ../postman/globals/workspace.globals.yaml: 18451043-24f2-4362-8c81-53b02ffd822b
+  collections:
+    ../postman/collections/ТОИР API: 60082432-cd85b90d-9951-4f67-8a9c-ebe1388cb302
+  environments:
+    ../postman/environments/ТОИР.environment.yaml: 60082432-6742da88-ac3b-4b67-9107-b36d03570110

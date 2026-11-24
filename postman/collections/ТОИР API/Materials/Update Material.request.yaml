@@ -1,0 +1,18 @@
+$kind: http-request
+name: Update Material
+method: PUT
+url: '{{base_url}}/api/materials/{{material_code}}'
+order: 4000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "code": "MAT-001",
+      "name": "Масло моторное",
+      "unit": "л",
+      "stock": 200.0,
+      "minStock": 25.0,
+      "sklad": "Склад №1"
+    }

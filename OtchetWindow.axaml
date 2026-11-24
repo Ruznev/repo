@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App"
+        mc:Ignorable="d" d:DesignWidth="830" d:DesignHeight="500"
+        x:Class="App.OtchetWindow"
+        Title="OtchetWindow" WindowStartupLocation="CenterScreen" Background="#990000" 
+        FontFamily="Times New Roman" FontSize="13">
+
+        <Window.Styles>
+          <Style Selector="DataGridRow">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#BF0000"/>
+          </Style>
+        </Window.Styles>
+
+      <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#990000" Padding="10">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" 
+                VerticalAlignment="Center">
+                    <Button x:Name="ExitButton" Content="                   Выйти" 
+                    Width="180" Height="40" Margin="0,0,10,0" 
+                    Background="#994C00" Foreground="White"
+                    Click="ExitButton_Click"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" 
+                VerticalAlignment="Center">
+                    <Button x:Name="RefreshButton" Content="                 Обновить" 
+                    Width="180" Height="40" Margin="0,0,10,0" 
+                    Background="#994C00" Foreground="White"
+                    Click="RefreshButton_Click"/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Text="Отчеты" FontSize="22" 
+                    FontWeight="Bold" VerticalAlignment="Center" 
+                    Foreground="White"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <DataGrid x:Name="ZayavkaDataGrid" Grid.Row="1" Margin="10"
+          AutoGenerateColumns="False" IsReadOnly="True"
+          SelectionMode="Single" HeadersVisibility="Column"
+          GridLinesVisibility="All" Background="#333333" BorderBrush="#333333" BorderThickness="2"
+          RowHeight="32">
+          <DataGrid.Columns>
+            <DataGridTextColumn x:DataType="local:Otchet" Header="Номер отчета" Binding="{Binding N_Otchet}" Width="120"/>
+            <DataGridTextColumn x:DataType="local:Otchet" Header="Период с" Binding="{Binding Period_c}" Width="150"/>
+            <DataGridTextColumn x:DataType="local:Otchet" Header="Период до" Binding="{Binding Period_do}" Width="150"/>
+            <DataGridTextColumn x:DataType="local:Otchet" Header="Номер цеха" Binding="{Binding N_tsekha}" Width="150"/>
+            <DataGridTextColumn x:DataType="local:Otchet" Header="Общее время простоев" Binding="{Binding LoseTime}" Width="200"/>
+          </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10" 
+        HorizontalAlignment="Right">
+        <Button x:Name="AddOtchetButton" Content="            Добавить отчет" Width="180" 
+        Height="40" Margin="0,0,10,0" Background="#994C00" Foreground="White"
+        Click="AddOtchetButton_Click"/>
+        <Button x:Name="EditOtchetButton" Content="           Редактировать отчет" Width="200"
+        Height="40" Margin="0,0,10,0" Background="#994C00" Foreground="White"
+        Click="EditOtchetButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

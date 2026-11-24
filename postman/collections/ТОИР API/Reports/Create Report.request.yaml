@@ -1,0 +1,17 @@
+$kind: http-request
+name: Create Report
+method: POST
+url: '{{base_url}}/api/reports'
+order: 3000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "n_otchet": 1,
+      "period_c": "2026-01-01",
+      "period_do": "2026-01-31",
+      "n_tsekha": 3,
+      "loseTime": 4.5
+    }

@@ -1,0 +1,18 @@
+$kind: http-request
+name: Create Equipment
+method: POST
+url: '{{base_url}}/api/equipment'
+order: 3000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id_nomer": 101,
+      "name": "Токарный станок",
+      "model": "16К20",
+      "status": "Работает",
+      "unit": "шт",
+      "zakrepTsekh": "Цех №3"
+    }

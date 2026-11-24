@@ -1,0 +1,99 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="540" d:DesignHeight="630"
+        x:Class="App.AddEditMaterialWindow"
+        Title="AddEditMaterialWindow" Background="#990000" 
+        WindowStartupLocation="CenterScreen" FontFamily="Times New Roman">
+
+        <Window.Styles>
+          <Style Selector="ComboBoxItem">
+            <Setter Property="Background" Value="#8C0000"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="25,10"/>
+          </Style>
+          <Style Selector="ComboBoxItem:pointerover">
+            <Setter Property="Background" Value="#A60000"/>
+          </Style>
+          <Style Selector="ComboBoxItem:selected">
+            <Setter Property="Background" Value="#A60000"/>
+          </Style>
+        </Window.Styles>
+        <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,5,0,15">
+            <TextBlock Text="   Создание/Редактирование материала" Foreground="White" 
+            FontSize="28" FontWeight="Bold" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="#333333" CornerRadius="4" Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" VerticalAlignment="Top" Margin="30,20,30,0">
+                  <TextBox x:Name="MaterialCode" Tag="Код Материала" Text="Код Материала"
+                  Height="50" Background="#BF0000" Foreground="White"
+                  BorderThickness="0" TextAlignment="Center" FontSize="20" 
+                  Padding="25,0" VerticalContentAlignment="Center" 
+                  Margin="0,0,0,16"/>
+
+                  <TextBox x:Name="MaterialName" Tag="Наименование" Text="Наименование"
+                  Height="50" Background="#BF0000" Foreground="White"
+                  BorderThickness="0" TextAlignment="Center" FontSize="20" 
+                  Padding="25,0" VerticalContentAlignment="Center" 
+                  Margin="0,0,0,16"/>
+                  
+                  <ComboBox x:Name="EdIzmereniya" PlaceholderText="Единица измерения"
+                  Height="50" Background="#BF0000" Foreground="White"
+                  BorderThickness="0" FontSize="20" Padding="25,0"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                  Margin="0,0,0,16">
+                    <ComboBoxItem>кг</ComboBoxItem>
+                    <ComboBoxItem>т</ComboBoxItem>
+                    <ComboBoxItem>ц</ComboBoxItem>
+                    <ComboBoxItem>г</ComboBoxItem>
+                    <ComboBoxItem>л</ComboBoxItem>
+                  </ComboBox>
+
+                  <TextBox x:Name="Ostatok" Tag="Остаток" 
+                  Text="Остаток" Height="50" Background="#BF0000" 
+                  Foreground="White" BorderThickness="0" TextAlignment="Center" 
+                  FontSize="20" Padding="25,0" VerticalContentAlignment="Center" 
+                  Margin="0,0,0,16"/>
+
+                  <TextBox x:Name="MinOstatok" Tag="Мин.Остаток" 
+                  Text="Мин.Остаток" Height="50" Background="#BF0000" 
+                  Foreground="White" BorderThickness="0" TextAlignment="Center" 
+                  FontSize="20" Padding="25,0" VerticalContentAlignment="Center" 
+                  Margin="0,0,0,16"/>
+
+                  <ComboBox x:Name="MestoXraneniya" PlaceholderText="Место хранения"
+                  Height="50" Background="#BF0000" Foreground="White"
+                  BorderThickness="0" FontSize="20" Padding="25,0"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                  Margin="0,0,0,16">
+                    <ComboBoxItem>Склад №1</ComboBoxItem>
+                    <ComboBoxItem>Склад №2</ComboBoxItem>
+                    <ComboBoxItem>Склад №3</ComboBoxItem>
+                  </ComboBox>
+                  
+                </StackPanel>
+
+                <Grid Grid.Row="1" Margin="30,10">
+                    <Button Content="         Завершить" Width="180" Height="40" x:Name="EndButton"
+                     HorizontalAlignment="Center" Background="#994C00" Foreground="White"
+                     FontSize="18" BorderThickness="0" Click="EndButton_Click"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

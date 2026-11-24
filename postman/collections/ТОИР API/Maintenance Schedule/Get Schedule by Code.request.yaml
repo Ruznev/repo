@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Schedule by Code
+method: GET
+url: '{{base_url}}/api/maintenance-schedule/{{code_toir}}'
+order: 2000

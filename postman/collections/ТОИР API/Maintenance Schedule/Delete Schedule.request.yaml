@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Schedule
+method: DELETE
+url: '{{base_url}}/api/maintenance-schedule/{{code_toir}}'
+order: 5000

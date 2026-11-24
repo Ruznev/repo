@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Schedules
+method: GET
+url: '{{base_url}}/api/maintenance-schedule'
+order: 1000

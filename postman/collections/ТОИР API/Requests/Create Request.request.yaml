@@ -1,0 +1,18 @@
+$kind: http-request
+name: Create Request
+method: POST
+url: '{{base_url}}/api/requests'
+order: 3000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "type": "Плановое ТО",
+      "priority": "Средний",
+      "reason": "Плановое техническое обслуживание оборудования",
+      "status": "Новая",
+      "brigada": "Бригада №2",
+      "employees": "Иванов И.И., Петров П.П."
+    }

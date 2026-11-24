@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Requests
+method: GET
+url: '{{base_url}}/api/requests'
+order: 1000

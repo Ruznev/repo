@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App"
+        mc:Ignorable="d" d:DesignWidth="1130" d:DesignHeight="520"
+        x:Class="App.GrafickNormaWindow"
+        Title="GrafickNormaWindow" WindowStartupLocation="CenterScreen" Background="#990000" 
+        FontFamily="Times New Roman" FontSize="13">
+        <Window.Styles>
+          <Style Selector="DataGridRow">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#BF0000"/>
+          </Style>
+        </Window.Styles>
+
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#990000" Padding="10">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" 
+                VerticalAlignment="Center">
+                    <Button x:Name="ExitButton" Content="                   Выйти" 
+                    Width="180" Height="40" Margin="0,0,10,0" 
+                    Background="#994C00" Foreground="White"
+                    Click="ExitButton_Click"/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Text="                                ТО, графики и нормативы " FontSize="22" 
+                    FontWeight="Bold" VerticalAlignment="Center" 
+                    Foreground="White"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <DataGrid x:Name="GrafickTODataGrid" Grid.Row="1" Margin="10"
+          AutoGenerateColumns="False" IsReadOnly="True"
+          SelectionMode="Single" HeadersVisibility="Column"
+          GridLinesVisibility="All" Background="#333333" BorderBrush="#333333" BorderThickness="2"
+          RowHeight="32">
+          <DataGrid.Columns>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="КодТОиР" Binding="{Binding CodeTOIR}" Width="100"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Наименование" Binding="{Binding Name}" Width="170"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Периодичность дней" Binding="{Binding Period}" Width="150"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Запланированная дата" Binding="{Binding PlanDate}" Width="170"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Затраченное время (ч.)" Binding="{Binding SpendTime}" Width="160"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Фактическая дата" Binding="{Binding FactDate}" Width="150"/>
+            <DataGridTextColumn x:DataType="local:GraficTO" Header="Результат из отчета" Binding="{Binding OtchetResult}" Width="2100"/>
+          </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

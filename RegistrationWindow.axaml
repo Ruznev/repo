@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="380" d:DesignHeight="560" x:Class="App.RegistrationWindow"
+        Title="RegistrationWindow" Background="#990000" 
+        WindowStartupLocation="CenterScreen" FontFamily="Times New Roman">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,5,0,15">
+            <TextBlock Text="Регистрация" Foreground="White" FontSize="28" 
+            FontWeight="Bold" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="#333333" CornerRadius="4" Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" VerticalAlignment="Top" Margin="30,20,30,0">
+                    <TextBox x:Name="PhoneBox" Tag="Номер телефона" Text="Номер телефона" 
+                    Height="50" Background="#BF0000" Foreground="White" 
+                    BorderThickness="0" TextAlignment="Center" FontSize="20" Padding="25,0" 
+                    VerticalContentAlignment="Center" Margin="0,0,0,16"/>
+                    <TextBox x:Name="EmailBox" Tag="Email" Text="Email" Height="50" 
+                    Background="#BF0000" Foreground="White" BorderThickness="0" 
+                    FontSize="20" Padding="25,0" TextAlignment="Center"  VerticalContentAlignment="Center" Margin="0,0,0,16"/>
+                    <TextBox x:Name="PasswordBox" Text="Пароль"  Height="50" Background="#BF0000" 
+                    Foreground="White" BorderThickness="0" FontSize="20" Padding="25,0" 
+                    VerticalContentAlignment="Center" TextAlignment="Center"  Margin="0,0,0,16"/>
+                    <TextBox x:Name="FullNameBox" TextAlignment="Center"  Tag="ФИО" Text="ФИО" Height="50" 
+                    Background="#BF0000" Foreground="White" BorderThickness="0" 
+                    FontSize="20" Padding="25,0" VerticalContentAlignment="Center" Margin="0,0,0,16"/>
+                    <TextBox x:Name="DoljnostBox" Tag="Должность" Text="Должность" Height="50"
+                    Background="#BF0000" TextAlignment="Center"  Foreground="White" BorderThickness="0" 
+                    FontSize="20" Padding="25,0" VerticalContentAlignment="Center" Margin="0,0,0,16"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1" Margin="30,10">
+                    <Button Content=" Зарегистрироваться" Width="180" Height="40"
+                     HorizontalAlignment="Center" Background="#994C00" Foreground="White"
+                     FontSize="18" BorderThickness="0" Click="Register_Click"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

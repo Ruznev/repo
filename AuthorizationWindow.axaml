@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="using:App"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="670" d:DesignHeight="500" x:Class="App.AuthorizationWindow" 
+        Background="#990000" Title="Aut" 
+        WindowStartupLocation="CenterScreen" FontFamily="Times New Roman">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,5,0,15">
+            <TextBlock Text="Авторизация" Foreground="White" FontSize="28" 
+            FontWeight="Bold" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="#333333" CornerRadius="4" Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" VerticalAlignment="Top" Margin="30,40,30,0">
+                    <TextBox x:Name="EmailBox" Tag="Электронная почта" Text="Электронная почта" 
+                    Height="70" Background="#BF0000" Foreground="White" BorderThickness="0" 
+                    FontSize="26" Padding="30,0" VerticalContentAlignment="Center" Margin="0,0,0,40" />
+                    <local:PasswordBox x:Name="PasswordBox" PlaceholderText="Пароль"
+                   Height="70" Background="#BF0000" Foreground="White"
+                   BorderThickness="0" FontSize="26" Padding="30,0"
+                   VerticalContentAlignment="Center" Margin="0,0,0,16"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1" Margin="30,0,30,20">
+                    <Button Content="           Войти" Width="200" Height="55" 
+                    HorizontalAlignment="Left" Background="#994C00" Foreground="White" 
+                    FontSize="22" BorderThickness="0" Click="Author_Click" />
+                    <Button Content="        Регистрация" Width="220" Height="55" 
+                    HorizontalAlignment="Right" Background="#994C00" Foreground="White" 
+                    FontSize="22" BorderThickness="0" Click="Reg_Click" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+$kind: http-request
+name: Create Schedule
+method: POST
+url: '{{base_url}}/api/maintenance-schedule'
+order: 3000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "codeTOIR": "TO-001",
+      "name": "Техническое обслуживание токарного станка",
+      "period": 30,
+      "planDate": "2026-12-01",
+      "spendTime": 8,
+      "factDate": null,
+      "otchetResult": ""
+    }

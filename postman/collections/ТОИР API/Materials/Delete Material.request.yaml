@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Material
+method: DELETE
+url: '{{base_url}}/api/materials/{{material_code}}'
+order: 5000

@@ -1,0 +1,18 @@
+$kind: http-request
+name: Create Material
+method: POST
+url: '{{base_url}}/api/materials'
+order: 3000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "code": "MAT-001",
+      "name": "Масло моторное",
+      "unit": "л",
+      "stock": 150.5,
+      "minStock": 20.0,
+      "sklad": "Склад №1"
+    }

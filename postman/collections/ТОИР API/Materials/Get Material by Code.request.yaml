@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Material by Code
+method: GET
+url: '{{base_url}}/api/materials/{{material_code}}'
+order: 2000

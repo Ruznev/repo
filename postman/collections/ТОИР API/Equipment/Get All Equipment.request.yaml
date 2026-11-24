@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Equipment
+method: GET
+url: '{{base_url}}/api/equipment'
+order: 1000

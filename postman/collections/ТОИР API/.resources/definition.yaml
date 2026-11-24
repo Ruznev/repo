@@ -1,0 +1,6 @@
+$kind: collection
+name: ТОИР API
+description: API collection for the ТОИР (Technical Maintenance and Repair) desktop application. Covers authentication, materials, equipment, reports, work requests, and maintenance schedules.
+variables:
+  - key: base_url
+    value: 'http://localhost:5000'

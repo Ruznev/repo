@@ -1,0 +1,17 @@
+$kind: http-request
+name: Update Report
+method: PUT
+url: '{{base_url}}/api/reports/{{report_id}}'
+order: 4000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "n_otchet": 1,
+      "period_c": "2026-01-01",
+      "period_do": "2026-01-31",
+      "n_tsekha": 3,
+      "loseTime": 6.0
+    }

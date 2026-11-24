@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Request by ID
+method: GET
+url: '{{base_url}}/api/requests/{{request_id}}'
+order: 2000

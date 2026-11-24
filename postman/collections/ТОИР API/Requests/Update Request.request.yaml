@@ -1,0 +1,18 @@
+$kind: http-request
+name: Update Request
+method: PUT
+url: '{{base_url}}/api/requests/{{request_id}}'
+order: 4000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "type": "Плановое ТО",
+      "priority": "Критический",
+      "reason": "Срочный ремонт оборудования",
+      "status": "В работе",
+      "brigada": "Бригада №2",
+      "employees": "Иванов И.И., Петров П.П., Сидоров С.С."
+    }
